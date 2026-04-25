@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Team</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: radial-gradient(circle, #1a002b, #000);
+    color: white;
+}
+
+.header {
+    background: #00bcd4;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 26px;
+}
+
+/* VIDEO BOX */
+.video-box {
+    margin: 20px;
+    border: 2px solid cyan;
+    border-radius: 20px;
+    box-shadow: 0 0 20px purple;
+    overflow: hidden;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+/* PLAY BUTTON */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: limegreen;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* CARD */
+.card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 25px purple;
+}
+
+.badge {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.new { background: red; }
+.premium { background: linear-gradient(45deg, purple, blue); }
+
+.app {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.app img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.install {
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background: limegreen;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 0 20px lime;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Garena Free Fire Team</div>
+
+<div class="title">WATCH FULL VIDEO</div>
+
+<!-- VIDEO SECTION -->
+<div class="video-box">
+    <video id="myVideo" playsinline>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="play-btn" onclick="playVideo()">▶</div>
+</div>
+
+<!-- CARD SECTION -->
+<div class="card">
+    <span class="badge new">NEW</span>
+    <span class="badge premium">PREMIUM</span>
+
+    <div class="app">
+        <img src="https://via.placeholder.com/100" alt="app">
+        <div>
+            <h3>PROXY SERVER</h3>
+            <p>FREE FIRE PROXY SERVER UNLIMITED ACCESS</p>
+            ⭐⭐⭐⭐⭐
+        </div>
+    </div>
+
+    <a href="#" class="install">⬇ Install</a>
+</div>
+
+<script>
+function playVideo() {
+    let video = document.getElementById("myVideo");
+    video.play();
+    document.querySelector(".play-btn").style.display = "none";
+}
+</script>
+
+</body>
+</html>
