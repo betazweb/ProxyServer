@@ -32,18 +32,38 @@ body {
     color: #ccc;
 }
 
+/* VIDEO BOX */
 .video-box {
     margin: 20px;
     border: 2px solid cyan;
     border-radius: 20px;
     box-shadow: 0 0 20px purple;
     overflow: hidden;
+    position: relative;
 }
 
 video {
     width: 100%;
 }
 
+/* SPEAKER BUTTON */
+.sound-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: limegreen;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 15px lime;
+}
+
+/* CARD */
 .card {
     margin: 20px;
     padding: 20px;
@@ -99,20 +119,23 @@ video {
 <div class="title">WATCH FULL VIDEO</div>
 <div class="subtitle">How to download 👇</div>
 
+<!-- VIDEO -->
 <div class="video-box">
     <video id="myVideo" autoplay muted playsinline>
         <source src="video.MP4" type="video/mp4">
     </video>
+
+    <!-- SPEAKER BUTTON -->
+    <div class="sound-btn" onclick="toggleSound()">🔇</div>
 </div>
 
+<!-- CARD -->
 <div class="card">
     <span class="badge new">NEW</span>
     <span class="badge premium">PREMIUM</span>
 
     <div class="app">
-        <!-- LOGO -->
         <img src="logo.png.webp" class="app-logo">
-
         <div>
             <h3>PROXY SERVER</h3>
             <p>FREE FIRE PROXY SERVER UNLIMITED ACCESS</p>
@@ -126,11 +149,19 @@ video {
 </div>
 
 <script>
-document.addEventListener("click", function () {
+function toggleSound() {
     let video = document.getElementById("myVideo");
-    video.muted = false;
-    video.play();
-});
+    let btn = document.querySelector(".sound-btn");
+
+    if (video.muted) {
+        video.muted = false;
+        video.play();
+        btn.innerHTML = "🔊";
+    } else {
+        video.muted = true;
+        btn.innerHTML = "🔇";
+    }
+}
 </script>
 
 </body>
