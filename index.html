@@ -32,7 +32,6 @@ body {
     color: #ccc;
 }
 
-/* VIDEO */
 .video-box {
     margin: 20px;
     border: 2px solid cyan;
@@ -45,7 +44,6 @@ video {
     width: 100%;
 }
 
-/* CARD */
 .card {
     margin: 20px;
     padding: 20px;
@@ -70,11 +68,13 @@ video {
     margin-top: 20px;
 }
 
-.app img {
+.app-logo {
     width: 70px;
     height: 70px;
     border-radius: 15px;
+    object-fit: cover;
     margin-right: 15px;
+    box-shadow: 0 0 10px purple;
 }
 
 .install {
@@ -110,7 +110,9 @@ video {
     <span class="badge premium">PREMIUM</span>
 
     <div class="app">
-        <img src="https://via.placeholder.com/100">
+        <!-- LOGO -->
+        <img src="logo.png.webp" class="app-logo">
+
         <div>
             <h3>PROXY SERVER</h3>
             <p>FREE FIRE PROXY SERVER UNLIMITED ACCESS</p>
@@ -118,7 +120,6 @@ video {
         </div>
     </div>
 
-    <!-- INSTALL BUTTON WITH YOUR LINK -->
     <a href="https://tlytmm.qdmmv.site?key=tlytmm72" class="install">
         ⬇ Install
     </a>
